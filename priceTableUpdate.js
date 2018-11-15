@@ -32,3 +32,64 @@ var CHAOTIC_GAMMA = 47903;
 //Bpcs aren't traded on the market, so are outside of the scope of this script
 //Ammo BPCS
 //Bpcs aren't traded on the market, so are outside of the scope of this script
+//Skillbooks
+var PRECURSOR_FRIGATE =
+var PRECUSOR_DESTROYER = 
+var PRECURSOR_CRUISER = 
+var PRECURSOR_BATTLECRUISER = 
+var PRECURSOR_BATTLESHIP = 
+var SMALL_PRECURSOR = 
+var MEDIUM PRECURSOR =
+var LARGE_PRECURSOR = 
+var SMALL_SPEC = 
+var MEDIUM_SPEC = 
+var LARGE SPEC =  
+//GOO
+var CRYSTALLINE_ISO = 
+var TRI_SUR_DATA = 
+//Mutaplasmids
+var DECAYED_1MN =
+var GRAVID_1MN = 
+var UNSTABLE_1MN = 
+
+var DECAYED_5MN =
+var GRAVID_5MN =
+var UNSTABLE_5MN =
+
+var DECAYED_10MN =
+var GRAVID_10MN =
+var UNSTABLE_10MN =
+
+var DECAYED_50MN =
+var GRAVID_50MN = 
+var UNSTABLE_50MN =
+
+var DECAYED_100MN = 
+var GRAVID_100MN = 
+var UNSTABLE_100MN = 
+
+var DECAYED_500MN = 
+var GRAVID_500MN = 
+var UNSTABLE_500MN = 
+
+var DECAYED_SMALL_ARMOR_REP =
+var GRAVID_SMALL_ARMOR_REP =
+var UNSTABLE_SMALL_ARMOR_REP =
+var ABNORMAL_SMALL_ANCIL_REP = 
+
+var DECAYED_MEDIUM_ARMOR_REP =
+var GRAVID_MEDIUM_ARMOR_REP =
+var UNSTABLE_MEDIUM_ARMOR_REP =
+var ABNORMAL_MEDIUM_ANCIL_REP = 
+
+var DECAYED_LARGE_ARMOR_REP =
+var GRAVID_LARGE_ARMOR_REP =
+var UNSTABLE_LARGE_ARMOR_REP =
+var ABNORMAL_LARGE_ANCIL_REP = 
+//All the weapon upgrades except DDA's
+//abnormal mutagens for ancils
+
+//Disintegrators 
+var FRIGATE_DIS = 
+var CRUISER_DIS = 
+var BATTLESHIP_DIS = 
