@@ -24,7 +24,6 @@ function getItemIdsFromDb(callback){
 	    	itemIds.push(item.item_id);
 	    });
 		callback(itemIds);
-		con.end();
 	  });
 	});
 }
