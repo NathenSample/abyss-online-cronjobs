@@ -1,1 +1,0 @@
-//SELECT itemID FROM LootLookup WHERE marketable = true
