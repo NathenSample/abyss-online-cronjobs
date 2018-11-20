@@ -30,13 +30,11 @@ function getItemIdsFromDb(callback) {
 
 function processItems(itemIds) {
     console.log("Retrieved " + itemIds.length + " item IDs from the database");
-    itemIds.forEach(function(itemId) {
-        getPricesAndUpdate(itemId);
-    });
+    Promise.all(itemIds.map((i) => getPricesAndUpdate(i))).then(() => console.log('disconnectme');
 }
 
 function getPricesAndUpdate(itemId) {
-    request('GET', "https://api.evemarketer.com/ec/marketstat/json?typeid=" + itemId + "&usesystem=30000142", {
+    return request('GET', "https://api.evemarketer.com/ec/marketstat/json?typeid=" + itemId + "&usesystem=30000142", {
         headers: {
             "User-Agent": "ChristyCloud"
         }
