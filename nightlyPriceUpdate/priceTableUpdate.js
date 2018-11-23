@@ -34,20 +34,19 @@ function processItems(itemIds) {
 }
 
 function getPricesAndUpdate(itemId) {
-    return request('GET', "https://api.evemarketer.com/ec/marketstat/json?typeid=" + itemId + "&usesystem=30000142", {
-        headers: {
-            "User-Agent": "ChristyCloud"
-        }
-    }).done(function(res) {
-        var responseBody = JSON.parse(res.getBody("UTF-8"));
-        update(itemId, responseBody[0].buy.max);
-    });
-}
-
-function update(itemId, price) {
-    console.log("Update " + itemId + " with price " + price);
-    con.query("UPDATE loot_items SET item_value = " + price + " WHERE item_id = " + itemId, function(err, result, fields) {
-        if (err) throw err;
+    return new Promise((resolve, reject) => {
+        request('GET', "https://api.evemarketer.com/ec/marketstat/json?typeid=" + itemId + "&usesystem=30000142", {
+            headers: {
+                "User-Agent": "ChristyCloud"
+            }
+        }).done(function(res) {
+            var responseBody = JSON.parse(res.getBody("UTF-8"));
+            console.log("Update " + itemId + " with price " + price);
+            con.query("UPDATE loot_items SET item_value = " + price + " WHERE item_id = " + itemId, function(err, result, fields) {
+                if (err) throw err;
+                resolve();
+            });
+        });
     });
 }
 
